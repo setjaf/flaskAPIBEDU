@@ -108,9 +108,9 @@ def futuro(data, n_estimator, rand, dias = 3):
     return fut.astype('float')
 
 
-app = Flask(__name__)
-api = Api(app)
-CORS(app)
+myapp = Flask(__name__)
+api = Api(myapp)
+CORS(myapp)
 
 TODOS = {
     'todo1': {'task': 'build an API'},
@@ -205,4 +205,4 @@ api.add_resource(TodoList, '/pred')
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    myapp.run(debug=True)
